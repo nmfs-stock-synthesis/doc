@@ -1,7 +1,7 @@
 % Preamble =========================================================================================
 %Options added to improve pdf accessibility:
-\RequirePackage{pdfmanagement-testphase}
-\PassOptionsToPackage{enable-debug,check-declarations}{expl3}
+% \RequirePackage{pdfmanagement-testphase}
+% \PassOptionsToPackage{enable-debug,check-declarations}{expl3}
 %\DeclareDocumentMetadata {  }
 \DocumentMetadata{testphase={phase-III,math}}
 \ExplSyntaxOn
@@ -48,16 +48,16 @@
 \usepackage{crimson}              	% serif font
 \usepackage[T1]{fontenc}         	% controls font enconding
 \usepackage[nottoc,numbib]{tocbibind}
-\usepackage[all]{nowidow}		    % Widow Control
+\usepackage[all]{nowidow}	pdf	    % Widow Control
 
 % For tagging the pdf: https://github.com/jgm/pandoc/issues/5409#issuecomment-770417614
-\ifluatex
-%   \usepackage[luamode]{tagpdf}
-  \tagpdfsetup{
-      activate-all=true,
-      interwordspace=true
-   }
-\fi
+% \ifluatex
+% %   \usepackage[luamode]{tagpdf}
+%   \tagpdfsetup{
+%       activate-all=true,
+%       interwordspace=true
+%    }
+% \fi
 % End tagging the pdf
 
 % Set widow and club penalties
