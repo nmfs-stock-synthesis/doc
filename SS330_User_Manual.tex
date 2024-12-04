@@ -1,12 +1,6 @@
 % Preamble =========================================================================================
 %Options added to improve pdf accessibility:
-\RequirePackage{pdfmanagement-testphase}
-\PassOptionsToPackage{enable-debug,check-declarations}{expl3}
-%\DeclareDocumentMetadata {  }
-\DocumentMetadata{testphase={phase-III,math}}
-\ExplSyntaxOn
-\pdfmanagement_add:nnn{Catalog}{Lang}{(enUS)}
-\ExplSyntaxOff
+\DocumentMetadata{testphase={phase-III,table}}
 % End accessibility options
 \documentclass[12pt]{article}
 \usepackage{sectsty}                % Allows for different fonts for header and body
@@ -49,16 +43,6 @@
 \usepackage[T1]{fontenc}         	% controls font enconding
 \usepackage[nottoc,numbib]{tocbibind}
 \usepackage[all]{nowidow}		    % Widow Control
-
-% For tagging the pdf: https://github.com/jgm/pandoc/issues/5409#issuecomment-770417614
-\ifluatex
-%   \usepackage[luamode]{tagpdf}
-  \tagpdfsetup{
-      activate-all=true,
-      interwordspace=true
-   }
-\fi
-% End tagging the pdf
 
 % Set widow and club penalties
 \widowpenalty=100000
