@@ -9,13 +9,13 @@
 \ExplSyntaxOff
 % End accessibility options
 \documentclass[12pt]{article}
-% \usepackage{sectsty}  % Allows for different fonts for header and body
-\usepackage{natbib} % bibliography package
-\usepackage{multicol} 
+\usepackage{sectsty}               % allows for different fonts for header and body
+\usepackage{natbib}                % bibliography package
 \usepackage[margin=1in, includefoot]{geometry}
-\usepackage{graphicx} % allows for image import
+\usepackage{graphicx}              % allows for image import
 \usepackage{enumerate}
-\usepackage{multirow}
+\usepackage{multirow}              % multi-row in tables
+\usepackage{multicol}              % multi-column in tables
 \usepackage{booktabs}
 \usepackage{lmodern}
 \usepackage[none]{hyphenat}
@@ -24,10 +24,9 @@
 \usepackage{pdflscape}
 \usepackage{longtable}
 \usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}         	% controls font enconding
+\usepackage[T1]{fontenc}         	% controls font encoding
 \usepackage{roboto} 				% sans serif font for headers
 \usepackage{crimson}              	% serif font
-%\usepackage[english]{babel}
 \usepackage[table]{xcolor}
 \usepackage{colortbl}
 \usepackage{hhline}
@@ -59,22 +58,22 @@
 \widowpenalty=100000
 \clubpenalty=100000
 
-% %sectsty commands
-% % all section headers use the same sans serif family - roboto
-% %\allsectionsfont{\sffamily\selectfont\roboto\mdseries\bfseries}
-% \allsectionsfont{\sffamily\selectfont\roboto\mdseries\bfseries}
-% % Set size and color of section header AL's H1
-% %\sectionfont{\LARGE\nohang\centering\roboto\textcolor[cmyk]{0.90, 0.54, 0.28, 0.12}}
-% \sectionfont{\LARGE\nohang\centering\roboto\textcolor[cmyk]{0.90, 0.54, 0.28, 0.12}}
-% % Set size and color of subsection header AL's H2
-% %\subsectionfont{\fontsize{18pt}{20pt}\selectfont\roboto\nohang\centering\textcolor[cmyk]{0.90, 0.54, 0.28, 0.12}}
-% \subsectionfont{\fontsize{18pt}{20pt}\selectfont\roboto\nohang\centering\textcolor[cmyk]{0.90, 0.54, 0.28, 0.12}}
-% % Set size and color of subsubsection header AL's H3
-% \subsubsectionfont{\hspace{0pt}\nohang\fontsize{16pt}{18pt}\selectfont\roboto\raggedright\textcolor[cmyk]{0.50, 0.05, 0.0, 0.40}}
-% % Set size and color of paragraph header AL's H4
-% %\paragraphfont{\fontsize{14pt}{16pt}\selectfont\robotocondensed\fontseries{bl}\selectfont\textcolor[cmyk]{0.50, 0.05, 0.0, 0.40}}
-% \paragraphfont{\fontsize{14pt}{16pt}\selectfont\robotocondensed\fontseries{bl}\selectfont\textcolor[cmyk]{0.50, 0.05, 0.0, 0.40}}
-% \newcolumntype{R}{>{\raggedright\arraybackslash}p{3cm}}
+%sectsty commands
+% all section headers use the same sans serif family - roboto
+%\allsectionsfont{\sffamily\selectfont\roboto\mdseries\bfseries}
+\allsectionsfont{\sffamily\selectfont\roboto\mdseries\bfseries}
+% Set size and color of section header AL's H1
+%\sectionfont{\LARGE\nohang\centering\roboto\textcolor[cmyk]{0.90, 0.54, 0.28, 0.12}}
+\sectionfont{\LARGE\nohang\centering\roboto\textcolor[cmyk]{0.90, 0.54, 0.28, 0.12}}
+% Set size and color of subsection header AL's H2
+%\subsectionfont{\fontsize{18pt}{20pt}\selectfont\roboto\nohang\centering\textcolor[cmyk]{0.90, 0.54, 0.28, 0.12}}
+\subsectionfont{\fontsize{18pt}{20pt}\selectfont\roboto\nohang\centering\textcolor[cmyk]{0.90, 0.54, 0.28, 0.12}}
+% Set size and color of subsubsection header AL's H3
+\subsubsectionfont{\hspace{0pt}\nohang\fontsize{16pt}{18pt}\selectfont\roboto\raggedright\textcolor[cmyk]{0.50, 0.05, 0.0, 0.40}}
+% Set size and color of paragraph header AL's H4
+%\paragraphfont{\fontsize{14pt}{16pt}\selectfont\robotocondensed\fontseries{bl}\selectfont\textcolor[cmyk]{0.50, 0.05, 0.0, 0.40}}
+\paragraphfont{\fontsize{14pt}{16pt}\selectfont\robotocondensed\fontseries{bl}\selectfont\textcolor[cmyk]{0.50, 0.05, 0.0, 0.40}}
+\newcolumntype{R}{>{\raggedright\arraybackslash}p{3cm}}
 
 %\definecolor{lightgray}{gray}{0.92}
 \fancyhead{}
@@ -89,14 +88,6 @@
 \emergencystretch=\maxdimen
 \hyphenpenalty=10000
 \hbadness=10000
-
-%\hypersetup{%
-%	colorlinks=false,% hyperlinks will be black
-%	linkbordercolor=red,% hyperlink borders will be red
-%	pdfborderstyle={/S/U/W 1}% border style will be underline of width 1pt
-%}
-
-
 
 %%The following sets up how the pdf displays links and functions in Acrobat.
 \hypersetup{
@@ -122,9 +113,6 @@
 \newcolumntype{L}{>{\centering\arraybackslash}m{3in}}
 
 \newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\\}
-
-% Define a term for SS3 abbreviation to use across document
-% \newcommand{\SS}{SS3}
 
 % Create custom font title of document
 % note the use of:
@@ -170,7 +158,7 @@
 
 		
 	% ====== Table of Contents ===================================================
-	\glsaddall	
+	% \glsaddall	
  	\pagenumbering{roman}
 	\tableofcontents
 	\thispagestyle{empty}
