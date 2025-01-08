@@ -1,5 +1,5 @@
 \hypertarget{intro}{}
-\section[Introduction]{\protect\hyperlink{intro}{Introduction}}
+\section[Introduction]
 
 Fish population (aka ``stock'') assessment models determine the impact of past fishing on the historical and current abundance of the population, evaluate sustainable rates of removals (catch), and project future levels of catch reflecting one or more risk-averse catch rules. These catch rules are codified in regional Fishery Management Plans according to requirements of the Sustainable Fisheries Act. In the U.S., approximately 500 federally managed fish and shellfish populations are managed under approximately 50 Fishery Management Plans. About 200 of these populations are assessed each year, based on a prioritized schedule for their current status. Despite this, many minor species have never been quantitatively assessed. Although the pace is slower than that for weather forecasting, fish stock assessments are operational models for fisheries management.
 
@@ -18,7 +18,8 @@ Additional guidance for new users can be found on the \href{https://nmfs-ost.git
 To learn more about how to use Stock Synthesis, see the SS3 website for tutorials to get started and build your own models as well as topic-focused vignettes.
 
 \hypertarget{HowToCite}{}
-\subsection[How To Cite]{\protect\hyperlink{HowToCite}{How To Cite}}
+\subsection[How To Cite]
+% {\protect\hyperlink{HowToCite}{How To Cite}}
 Please cite Stock Synthesis as:
 
 Methot, R.D. and Wetzel, C.R. (2013). Stock Synthesis: A biological and statistical
@@ -30,10 +31,14 @@ Please cite the Stock Synthesis User Manual as:
 Methot, R. D., Jr., C. R. Wetzel, I. G. Taylor, and K. Doering. (2020). Stock Synthesis User Manual Version 3.30.15. U.S. Department of Commerce, NOAA Processed Report NMFS-NWFSC-PR-2020-05. \href{https://doi.org/10.25923/5wpn-qt71}{https://doi.org/10.25923/5wpn-qt71}
 
 \pagebreak
-		
-\section[File Organization]{\protect\hyperref[FileOrganization]{File Organization}}\label{FileOrganization}
+
+\hypertarget{FileOrganization}
+\section[File Organization]
+% {\protect\hyperref[FileOrganization]{File Organization}\label{FileOrganization}
+
 \hypertarget{InputFiles}{}
-\subsection[Input File]{\protect\hyperlink{InputFiles}{Input Files}}
+\subsection[Input File]
+% {\protect\hyperlink{InputFiles}{Input Files}}
 \begin{enumerate}
 	\item \verb|starter.ss|: required file containing filenames of the data file and the control file plus other run controls (required).
 	\item \verb|datafile|: file containing model dimensions and the data (required)
@@ -46,7 +51,8 @@ Methot, R. D., Jr., C. R. Wetzel, I. G. Taylor, and K. Doering. (2020). Stock Sy
 \end{enumerate}
 	
 \hypertarget{OutputFilesList}{}
-\subsection[Output Files]{\protect\hyperlink{OutputFilesList}{Output Files}}
+\subsection[Output Files]
+% {\protect\hyperlink{OutputFilesList}{Output Files}}
 \begin{enumerate}
 	\item \verb|data\_echo.ss\_new|: Contains the input data as read by the model. In model versions prior to v.3.30.19 a single \verb|data.ss\_new| file was created that included the echoed data, the expected data values (\verb|data\_expval.ss|), and any bootstrap data files selected (\verb|data\_boot\_x.ss|).
 	\item \verb|data\_expval.ss|: Contains the expected data values given the model fit. This file is only created if the value for ``Number of datafiles to produce'' in the starter file is set to 2 or greater.
@@ -75,9 +81,10 @@ Methot, R. D., Jr., C. R. Wetzel, I. G. Taylor, and K. Doering. (2020). Stock Sy
 \pagebreak
 
 \hypertarget{StartingSS3}{}
-\section[Starting Stock Synthesis]{\protect\hyperlink{StartingSS3}{Starting Stock Synthesis}}
-SS3 is typically run through the command line interface, although it can also be called from another program, R, the \gls{ssi}, or a script file (such as a DOS batch file). SS3 is compiled for Windows, Mac, and Linux operating systems. The memory requirements depend on the complexity of the model you run, but in general, SS3 will run much slower on computers with inadequate memory. See \hyperref[sec:RunningSS3]{Running Stock Synthesis} for additional notes on methods of running SS3.
+\section[Starting Stock Synthesis]
+% {\protect\hyperlink{StartingSS3}{Starting Stock Synthesis}}
+SS3 is typically run through the command line interface, although it can also be called from another program, R, the \gls{ssi}, or a script file (such as a DOS batch file). SS3 is compiled for Windows, Mac, and Linux operating systems. The memory requirements depend on the complexity of the model you run, but in general, SS3 will run much slower on computers with inadequate memory. See \hyperlink{RunningSS3}{Running Stock Synthesis} for additional notes on methods of running SS3.
 
-Communication with the program is through text files. When the program first starts, it reads the file \verb|starter.ss|, which typically must be located in the same directory from which SS3 is being run. The file \verb|starter.ss| contains required input information plus references to other required input files, as described in the \hyperref[FileOrganization]{File Organization section}. The names of the control and data files must match the names specified in the \verb|starter.ss| file. File names, including \verb|starter.ss|, are case-sensitive on Linux and Mac systems but not on Windows. The \verb|echoinput.sso| file outputs how the executable reads each input file and can be used for troubleshooting when trying to set up a model correctly. Output from SS3 consists of text files containing specific keywords. Output processing programs, such as Excel or R, can search for these keywords and parse the specific information located below that keyword in the text file.
+Communication with the program is through text files. When the program first starts, it reads the file \verb|starter.ss|, which typically must be located in the same directory from which SS3 is being run. The file \verb|starter.ss| contains required input information plus references to other required input files, as described in the \hyperlink{FileOrganization}{File Organization section}. The names of the control and data files must match the names specified in the \verb|starter.ss| file. File names, including \verb|starter.ss|, are case-sensitive on Linux and Mac systems but not on Windows. The \verb|echoinput.sso| file outputs how the executable reads each input file and can be used for troubleshooting when trying to set up a model correctly. Output from SS3 consists of text files containing specific keywords. Output processing programs, such as Excel or R, can search for these keywords and parse the specific information located below that keyword in the text file.
 
 \pagebreak
