@@ -9,7 +9,7 @@
 \ExplSyntaxOff
 % End accessibility options
 \documentclass[12pt]{article}
-\usepackage{sectsty}  % Allows for different fonts for header and body
+% \usepackage{sectsty}  % Allows for different fonts for header and body
 \usepackage{natbib} % bibliography package
 \usepackage{multicol} 
 \usepackage[margin=1in, includefoot]{geometry}
@@ -59,22 +59,22 @@
 \widowpenalty=100000
 \clubpenalty=100000
 
-%sectsty commands
-% all section headers use the same sans serif family - roboto
-%\allsectionsfont{\sffamily\selectfont\roboto\mdseries\bfseries}
-\allsectionsfont{\sffamily\selectfont\roboto\mdseries\bfseries}
-% Set size and color of section header AL's H1
-%\sectionfont{\LARGE\nohang\centering\roboto\textcolor[cmyk]{0.90, 0.54, 0.28, 0.12}}
-\sectionfont{\LARGE\nohang\centering\roboto\textcolor[cmyk]{0.90, 0.54, 0.28, 0.12}}
-% Set size and color of subsection header AL's H2
-%\subsectionfont{\fontsize{18pt}{20pt}\selectfont\roboto\nohang\centering\textcolor[cmyk]{0.90, 0.54, 0.28, 0.12}}
-\subsectionfont{\fontsize{18pt}{20pt}\selectfont\roboto\nohang\centering\textcolor[cmyk]{0.90, 0.54, 0.28, 0.12}}
-% Set size and color of subsubsection header AL's H3
-\subsubsectionfont{\hspace{0pt}\nohang\fontsize{16pt}{18pt}\selectfont\roboto\raggedright\textcolor[cmyk]{0.50, 0.05, 0.0, 0.40}}
-% Set size and color of paragraph header AL's H4
-%\paragraphfont{\fontsize{14pt}{16pt}\selectfont\robotocondensed\fontseries{bl}\selectfont\textcolor[cmyk]{0.50, 0.05, 0.0, 0.40}}
-\paragraphfont{\fontsize{14pt}{16pt}\selectfont\robotocondensed\fontseries{bl}\selectfont\textcolor[cmyk]{0.50, 0.05, 0.0, 0.40}}
-\newcolumntype{R}{>{\raggedright\arraybackslash}p{3cm}}
+% %sectsty commands
+% % all section headers use the same sans serif family - roboto
+% %\allsectionsfont{\sffamily\selectfont\roboto\mdseries\bfseries}
+% \allsectionsfont{\sffamily\selectfont\roboto\mdseries\bfseries}
+% % Set size and color of section header AL's H1
+% %\sectionfont{\LARGE\nohang\centering\roboto\textcolor[cmyk]{0.90, 0.54, 0.28, 0.12}}
+% \sectionfont{\LARGE\nohang\centering\roboto\textcolor[cmyk]{0.90, 0.54, 0.28, 0.12}}
+% % Set size and color of subsection header AL's H2
+% %\subsectionfont{\fontsize{18pt}{20pt}\selectfont\roboto\nohang\centering\textcolor[cmyk]{0.90, 0.54, 0.28, 0.12}}
+% \subsectionfont{\fontsize{18pt}{20pt}\selectfont\roboto\nohang\centering\textcolor[cmyk]{0.90, 0.54, 0.28, 0.12}}
+% % Set size and color of subsubsection header AL's H3
+% \subsubsectionfont{\hspace{0pt}\nohang\fontsize{16pt}{18pt}\selectfont\roboto\raggedright\textcolor[cmyk]{0.50, 0.05, 0.0, 0.40}}
+% % Set size and color of paragraph header AL's H4
+% %\paragraphfont{\fontsize{14pt}{16pt}\selectfont\robotocondensed\fontseries{bl}\selectfont\textcolor[cmyk]{0.50, 0.05, 0.0, 0.40}}
+% \paragraphfont{\fontsize{14pt}{16pt}\selectfont\robotocondensed\fontseries{bl}\selectfont\textcolor[cmyk]{0.50, 0.05, 0.0, 0.40}}
+% \newcolumntype{R}{>{\raggedright\arraybackslash}p{3cm}}
 
 %\definecolor{lightgray}{gray}{0.92}
 \fancyhead{}
@@ -186,7 +186,8 @@
 	\cleardoublepage
 	% ====== Section 1 - 4 =============================================================
 	\pagenumbering{arabic}
-	\input{1_4sections}
+	\section{Introduction}
+	Fish population (aka ``stock'') assessment models determine the impact of past fishing on the historical and current abundance of the population, evaluate sustainable rates of removals (catch), and project future levels of catch reflecting one or more risk-averse catch rules. These catch rules are codified in regional Fishery Management Plans according to requirements of the Sustainable Fisheries Act. In the U.S., approximately 500 federally managed fish and shellfish populations are managed under approximately 50 Fishery Management Plans. About 200 of these populations are assessed each year, based on a prioritized schedule for their current status. Despite this, many minor species have never been quantitatively assessed. Although the pace is slower than that for weather forecasting, fish stock assessments are operational models for fisheries management.
 	% ======== Section 5: Converting
 	% \input{5converting}
 	% % ======== Section 6: Starter File
