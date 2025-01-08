@@ -1,5 +1,5 @@
 \hypertarget{intro}{}
-\section[Introduction]
+\section{Introduction}
 
 Fish population (aka ``stock'') assessment models determine the impact of past fishing on the historical and current abundance of the population, evaluate sustainable rates of removals (catch), and project future levels of catch reflecting one or more risk-averse catch rules. These catch rules are codified in regional Fishery Management Plans according to requirements of the Sustainable Fisheries Act. In the U.S., approximately 500 federally managed fish and shellfish populations are managed under approximately 50 Fishery Management Plans. About 200 of these populations are assessed each year, based on a prioritized schedule for their current status. Despite this, many minor species have never been quantitatively assessed. Although the pace is slower than that for weather forecasting, fish stock assessments are operational models for fisheries management.
 
@@ -18,7 +18,7 @@ Additional guidance for new users can be found on the \href{https://nmfs-ost.git
 To learn more about how to use Stock Synthesis, see the SS3 website for tutorials to get started and build your own models as well as topic-focused vignettes.
 
 \hypertarget{HowToCite}{}
-\subsection[How To Cite]
+\subsection{How To Cite}
 % {\protect\hyperlink{HowToCite}{How To Cite}}
 Please cite Stock Synthesis as:
 
@@ -33,11 +33,11 @@ Methot, R. D., Jr., C. R. Wetzel, I. G. Taylor, and K. Doering. (2020). Stock Sy
 \pagebreak
 
 \hypertarget{FileOrganization}
-\section[File Organization]
+\section{File Organization}
 % {\protect\hyperref[FileOrganization]{File Organization}\label{FileOrganization}
 
 \hypertarget{InputFiles}{}
-\subsection[Input File]
+\subsection{Input File}
 % {\protect\hyperlink{InputFiles}{Input Files}}
 \begin{enumerate}
 	\item \verb|starter.ss|: required file containing filenames of the data file and the control file plus other run controls (required).
@@ -51,7 +51,7 @@ Methot, R. D., Jr., C. R. Wetzel, I. G. Taylor, and K. Doering. (2020). Stock Sy
 \end{enumerate}
 	
 \hypertarget{OutputFilesList}{}
-\subsection[Output Files]
+\subsection{Output Files}
 % {\protect\hyperlink{OutputFilesList}{Output Files}}
 \begin{enumerate}
 	\item \verb|data\_echo.ss\_new|: Contains the input data as read by the model. In model versions prior to v.3.30.19 a single \verb|data.ss\_new| file was created that included the echoed data, the expected data values (\verb|data\_expval.ss|), and any bootstrap data files selected (\verb|data\_boot\_x.ss|).
@@ -81,7 +81,7 @@ Methot, R. D., Jr., C. R. Wetzel, I. G. Taylor, and K. Doering. (2020). Stock Sy
 \pagebreak
 
 \hypertarget{StartingSS3}{}
-\section[Starting Stock Synthesis]
+\section{Starting Stock Synthesis}
 % {\protect\hyperlink{StartingSS3}{Starting Stock Synthesis}}
 SS3 is typically run through the command line interface, although it can also be called from another program, R, the \gls{ssi}, or a script file (such as a DOS batch file). SS3 is compiled for Windows, Mac, and Linux operating systems. The memory requirements depend on the complexity of the model you run, but in general, SS3 will run much slower on computers with inadequate memory. See \hyperlink{RunningSS3}{Running Stock Synthesis} for additional notes on methods of running SS3.
 
