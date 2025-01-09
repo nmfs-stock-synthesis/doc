@@ -115,7 +115,7 @@ Time steps can be broken into subseason and the \gls{alk} can be calculated mult
 The term COND appears in the ``Typical Value'' column of this documentation (it does not actually appear in the model files), it indicates that the following section is omitted except under certain conditions, or that the factors included in the following section depend upon certain conditions. In most cases, the description in the definition column is the same as the label output to the ss\_new files.
 
 \hypertarget{ModelDimensions}{}
-\subsection[Model Dimensions]{\protect\hypertarget{ModelDimensions}{Model Dimensions}}
+\subsection[Model Dimensions]{\protect\hyperlink{ModelDimensions}{Model Dimensions}}
 \begin{center}
 	\begin{longtable}{p{3cm} p{12cm}}
 		\hline
@@ -229,7 +229,6 @@ Ignored for survey fleets, their units are read later:
 \end{itemize}   
 See \hyperlink{UnitsOfMeasure}{Units of Measure} for more information.
 
-\hypertarget{CatchMult}{}
 \myparagraph{Catch Multiplier}
 Invokes use of a catch multiplier, which is then entered as a parameter in the mortality-growth parameter section. The estimated value or fixed value of the catch multiplier is used to adjust the observed catch:
 \begin{itemize}
@@ -343,7 +342,7 @@ Three types of data relevant to $M2$ can be input:
 
 With the input of data on the time series of total kill or predator effort, it should be possible to estimate annual deviations around the base $M2$ for years with data. If the $M2$ time series is instead driven by environmental data, then also including data on kill or effort can provide a means to view consistency between the environmental time series and the additional data sets. Output of $M2$ is found in a \texttt{Report.sso} section labeled predator ($M2$). In the example below, the $M2$ seasonal multiplier was defined to have random deviations by year. This allowed multipliers plus $M2$ itself to closely match the input consumption amounts (288 mt of consumption per season, the fit can be examined by looking at the discard output report).
 
-\hyperlink{Catch}{}
+\hypertarget{Catch}{}
 \subsection[Catch]{\protect\hyperlink{Catch}{Catch}}
 \hypertarget{CatchFormat}{}
 After reading the fleet-specific indicators, a list of catch values by fleet and season are read in by the model. The format for the catches is year and season that the catch is attributed to, fleet, a catch value, and a year-specific catch standard error. Only positive catches need to be entered, so there is no need for records corresponding to all years and fleets. To include an equilibrium catch value for a fleet and season, the year should be noted as -999. For each non-zero equilibrium catch value included, a short parameter line is required in the \hyperlink{InitF}{initial $F$ section} of the control file.

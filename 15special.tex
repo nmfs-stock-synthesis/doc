@@ -17,6 +17,7 @@ Starting in v.3.30, mortality-growth, some stock-recruitment, catchability, and 
 
 Environmental and density dependent linkages, parameter deviations, and either time blocks or trends can be applied to the same base parameter. The model processes each time-varying parameter specification (first time blocks and trends, then environmental linkages, then parameter deviations) and creates a time series of intermediate values that are used as the model subsequently loops through years.
 
+% figure 2
 \begin{figure}[ht]
 	\begin{center}
 		\includegraphics[alt={Some examples of time-varying setups.},scale = 0.4]{TimeVarying}\\
@@ -159,12 +160,13 @@ The following steps are now performed to determine the jittered starting paramet
 	\item Calculate a new parameter value, $P_{JITTERED}$, such that $pr(P_{JITTERED}) = J$.
 \end{enumerate}
 
+% figure 3
 \begin{figure}[ht]
 	\begin{center}
 		\includegraphics[alt={Plot showing parameter space on the x-axis along and transformed space on the y-axis. A cumulative normal line is shown where the 0.001 and 0.999 quantiles are set to min and max respectively. A vertical stack of horizontal bars show the distribution of transformed initial values plus U. The distribution is shown on the parameter space axis with the initial input value in gray and the new init in red. Red arrows on the cumulative normal line show the random U written as negative jitter value comma positive jitter value.},scale = 0.75]{jitter_illustration}\\
-		\caption{Illustration of the jitter algorithm.}
-		\label{fig:jitter}
 	\end{center}
+	\caption{Illustration of the jitter algorithm.}
+	\label{fig:jitter}
 \end{figure}
 
 In SS3, the jitter fraction defines a uniform distribution in cumulative normal space +/- the jitter fraction from the initial value (in cumulative normal space). The normal distribution for each parameter, for this purpose, is defined such that the minimum bound is at 0.001, and the maximum at 0.999 of the cumulative distribution. If the jitter faction and original initial value are such that a portion of the uniform distribution goes beyond 0.001 or 0.999 of the cumulative normal, the new value is set to one-tenth of the way from the bound to the original initial value. 
@@ -212,12 +214,14 @@ Note that the numbering in v.3.30 is different from that used in v.3.24 (where c
 & P_\text{PRSD} \cdot ln\left(1-\frac{P_\text{init}-P_\text{LB}-0.0001}{P_\text{UB}-P_\text{LB}}\right)
 		\end{split}
 	\end{equation}
-
+     
+	% figure 4
 	\begin{figure}[ht]
 		\begin{center}
 			\includegraphics[alt={The shape of the symmetric beta prior across alternative standard deviation values and the change in the negative log likelihood.},scale = 0.6]{SymetricBeta}\\
 		\end{center}
 		\caption{The shape of the symmetric beta prior across alternative standard deviation values and the change in the negative log likelihood.}
+		\label{fig:symmetricbeta}
 	\end{figure}	
 
 	

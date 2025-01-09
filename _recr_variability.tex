@@ -3,6 +3,7 @@
 
 Recruitments are defined as log-normal deviates around a log-bias adjusted spawner-recruitment curve. The magnitude of the log-bias adjustment is calculated from the level of $\sigma_R$, which is the standard deviation of the recruitment deviations (in natural log space). There are 5 segments of the time series in which to consider the effect of the log-bias adjustment: virgin; initial equilibrium; early data-poor period; data-rich period; very-recent/forecast. The choice of break points between these segments need not correspond directly with the settings for the bias adjustment, although some alignment might be desired. \citet{methot-adjusting-2011} provide more detailed discussion of the bias adjustment than what is provided below but do not address the separation of time periods into separate segments. The approach is illustrated with figures associated the assessment for darkblotched rockfish \citep{gertseva-status-2013}.
 
+% figure 7
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[alt={A plot showing the spawner-recruitment relationship output from SS\_plots in r4ss where the x-axis is spawning biomass in metric tons and the y-axis is recruitment in thousands. Red circles represent estimated recruitments. The solid black line shows the stock-recruit relationship and the green line shows the adjusted relationship to account for the log-normal distribution associated with each year.},scale = 0.70]{appendixA_recruits}\\
@@ -11,6 +12,7 @@ Recruitments are defined as log-normal deviates around a log-bias adjusted spawn
 	\label{fig:recruits}	
 \end{figure}
 
+% figure 8
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[alt={A time-series plot from SS\_plots output in r4ss showing the year on the x-axis and the natural log recruitment deviations on the y-axis. Caps around the mean show the 95 percent uncertainty interval for each year.},scale = 0.90]{appendixA_logdevs}\\
@@ -38,6 +40,7 @@ Here the length and or age data inform the model on the year-to-year level of re
 \myparagraph{Recent Years/Forecast}
 Here the situation is very similar to the early time period in that there are no data to inform the model about the year-to-year pattern in recruitment fluctuations so all deviations will be pulled to a zero level in the maximum posterior density. The structure of SS3 creates no sharp dividing line between the estimation period and the forecast period. In many cases one or more recruitments at the end of the time series will lack appreciable signal in the data and should therefore be treated as forecast recruit deviations. To the degree that some variability is observed in these recruitments, partial or full bias correction may be desirable for these deviations separate from the purely forecast deviations, there is therefore an additional control for the level of bias correction applied to forecast deviations occurring prior to end year + 1.
 
+% figure 9
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[alt={Time-series plot produced using SS\_plots in r4ss with year as the x-axis and asymptotic standard error estimates on the y-axis for the natural log recruitment deviations of darkblotched rockfish. The points in black are the main recruitment period and the red line at 0.75 indicates the sigma R value in this model.},scale = 0.90]{appendixA_asymerror}\\
@@ -46,7 +49,7 @@ Here the situation is very similar to the early time period in that there are no
 	\label{fig:recSE}
 \end{figure}
 
-
+% figure 10
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[alt={Plot of the transformation of the standard error estimates on the y-axis and year on the x-axis produced using r4ss. The red dashed line is the bias adjustment in the model and the blue line is the estimated alternative which is a functional form that minimizes the sume of the squared differences between the bias adjustment function and the transformed standard error values.},scale = 0.90]{appendixA_biasadj}\\
@@ -55,7 +58,7 @@ Here the situation is very similar to the early time period in that there are no
 	\label{fig:ramp}
 \end{figure}
 
-
+% figure 11
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[alt={A time-series plot produced from SS\_plots in r4ss with spawning depletion on the y-axis and year on the x-axis. Blue points show spawning depletion for recruitment deviations starting in 1870 with the blue shadded area indicating the 95 percent uncertainty intervals for these values. Red points show spawning depletion for recruitment deviations starting in 1960 with the red shadded area indicating the 95 percent uncertainty intervals for these values. The red dashed horizontal line at 0.40 is the management threshold and the red dashed horizontal line is the minimum stock size threshold.},scale = 0.90]{appendixA_depl}\\

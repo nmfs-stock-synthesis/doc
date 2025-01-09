@@ -32,6 +32,7 @@ Also see the help page for the \texttt{r4ss} function \texttt{SS\_varadjust()} w
 
 If the tuning has been implemented, the green lines in the figure below would approximately intersect at a point which is on the black 1-to-1 diagonal line in this figure created by the \texttt{r4ss} function \texttt{SS\_plots()}.
 
+% figure 5
 \begin{figure}[ht]
 	\begin{center}
 		\includegraphics[alt={A plot produced from SS\_plots() in r4ss showing the results from the implementation of the McAllister-Ianelli data-weighting method to the model output using the SS\_tune\_comps() function. The observed sample size is on the x-axis and the effective sample size is on the y-axis with a horizontal green dashed line indicating the harmonic mean and a vertical green dashed line indicating the arithmetic mean.},scale = 0.65]{appendixB_McAllister_Ianelli}\\
@@ -55,13 +56,13 @@ Implementation: recommended adjustments are calculated by the \texttt{r4ss} func
 
 The figure below shows the estimated 95\% intervals around the observed mean length by year based on the input sample size (thick lines) and the increase in that uncertainty which would occur if the sample sizes were adjusted according to the proposed multiplier.
 
+% figure 6
 \begin{figure}[ht]
 	\begin{center}
 		\includegraphics[alt={A plot produced from SS\_plots() in r4ss showing the results from the implementation of the Francis data-weighting method to the output using the SS\_tune\_comps() function. Year is on the x-axis and mean length is on the y-axis. There are 95\% confidence interval boxes around the mean displayed for each year. A blue line shows the expected variation of mean length across years.},scale = 0.15]{appendixB_Francis}\\
 	\end{center}
 	\caption{The mean length of the length samples for each year from the MexCal S1 NSP fleet with 95\% confidence intervals based on current samples sizes using the Francis data weighting method (referred to as TA1.8). Thinner intervals with capped ends show result of further adjusting sample sizes based on the suggested multiplier, 0.2739, with 95\% intervals for length data from the fleet. The blue line shows the expected variation of the mean length across years.}
 	\label{fig:francis}
-	%\figurename{name}
 \end{figure}
 
 There are a several of challenges posed by the Francis data-weighting approach:

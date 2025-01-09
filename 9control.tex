@@ -898,7 +898,7 @@ Next, the model reads the \gls{mg} parameters in generally the following order (
 	& Catch Multiplier & For each fleet selected for this option in the data file. \\
 	\hline
 
-	\multicolumn{2}{l}{Fraction female}\Tstrut & \raisebox{0.1\ht\strutbox}{\hypertarget{SexRatio}{Fraction}} female at the time of recruitment by growth pattern, if multiple growth patterns, multiple entries required. \Bstrut\\
+	\multicolumn{2}{l}{Fraction female}\Tstrut & \raisebox{0.1\ht\strutbox}{\hyperlink{SexRatio}{Fraction}} female at the time of recruitment by growth pattern, if multiple growth patterns, multiple entries required. \Bstrut\\
 	\hline
 	
 	\multicolumn{3}{l}{COND: The following lines are only required when predator fleets are invoked.} \Tstrut\\
@@ -1205,7 +1205,7 @@ Example setup of the spawner-recruitment section:
 The $R_{0}$, steepness, and regime shift parameters can be time-varying by blocks, trends, environmental linkages, or random deviations. Details on how to specify time-varying parameters can be found in the \hyperlink{tvOrder}{Time-Varying Parameter Specification and Setup} section. However, not all of these options make sense for all parameters; please see additional details in the section on \hyperlink{tv-sr}{Time-Varying Stock-Recruitment Considerations}.
 
 \hypertarget{TuneSigmaR}{}
-\subsubsection[Tuning $\sigma_R$]{\protect\hyperlink{TuneSigmaR}{Tuning $\sigma_R$}}
+\subsubsection[Tuning \texorpdfstring{$\sigma_R$}{Sigma R}]{\protect\hyperlink{TuneSigmaR}{Tuning \texorpdfstring{$\sigma_R$}{Sigma R}}}
 The $\sigma_R$ value is typically not estimable and it is recommended practice to tune input $\sigma_R$ values based on the variance in estimated recruitments post running SS3. The R package \href{https://github.com/r4ss/r4ss}{R code for Stock Synthesis (\texttt{r4ss})} designed to read and visualize SS3 model results provides recommendations on adjusting $\sigma_R$ values in the \texttt{sigma\_R\_info} object in the list created by the \texttt{r4ss::SS\_output()} function. An alternative $\sigma_R$ value is provided based on equation:
 
 \begin{equation}
