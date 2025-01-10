@@ -1,48 +1,49 @@
 % Preamble =========================================================================================
 %Options added to improve pdf accessibility:
-% \RequirePackage{pdfmanagement-testphase}
-% \PassOptionsToPackage{enable-debug,check-declarations}{expl3}
-% %\DeclareDocumentMetadata {  }
-% \DocumentMetadata{testphase={phase-III,math}}
-% \ExplSyntaxOn
-% \pdfmanagement_add:nnn{Catalog}{Lang}{(enUS)}
-% \ExplSyntaxOff
+\RequirePackage{pdfmanagement-testphase}
+\PassOptionsToPackage{enable-debug,check-declarations}{expl3}
+%\DeclareDocumentMetadata {  }
+\DocumentMetadata{testphase={phase-III,math}}
+\ExplSyntaxOn
+\pdfmanagement_add:nnn{Catalog}{Lang}{(enUS)}
+\ExplSyntaxOff
 % End accessibility options
 \documentclass[12pt]{article}
 \usepackage{sectsty}                % Allows for different fonts for header and body
 \usepackage{natbib}
 \usepackage{multicol}
 \usepackage[margin=1in, includefoot]{geometry}
-\usepackage{graphicx} % allows for image import
+\usepackage{graphicx} %allows for impage import
 \graphicspath{{images/}}
-% \usepackage{ragged2e}
+\usepackage{ragged2e}
 \usepackage{enumerate}
 \usepackage{multirow}
 \usepackage{booktabs}
+\usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage[none]{hyphenat}
 \usepackage{array}
 \usepackage{lscape}
 \usepackage{pdflscape}
 \usepackage{longtable}
-% \usepackage[utf8]{inputenc}
-% \usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+%\usepackage[english]{babel}
 \usepackage[table]{xcolor}
+\usepackage{colortbl}
 \usepackage{hhline}
-% \usepackage{tocloft}
-% \setlength{\cftsubsecnumwidth}{3em}
-% \setlength{\cftsubsubsecnumwidth}{4em}
+\usepackage{dcolumn}
+\usepackage{tocloft}
+\setlength{\cftsubsecnumwidth}{3em}
+\setlength{\cftsubsubsecnumwidth}{4em}
+\usepackage{amsmath}
 \usepackage{hyperref}
 \usepackage{hypcap}
-\usepackage{amsmath}
-\usepackage{unicode-math}
-\setmathfont{latinmodern-math.otf}
 \usepackage{float}
 \usepackage{fancyhdr}
 \usepackage[parfill]{parskip}
 \usepackage{roboto} 				% sans serif font for headers
 \usepackage{crimson}              	% serif font
-\usepackage[T1]{fontenc}         	% controls font encoding
+\usepackage[T1]{fontenc}         	% controls font enconding
 \usepackage[nottoc,numbib]{tocbibind}
 \usepackage[all]{nowidow}		    % Widow Control
 
@@ -75,7 +76,7 @@
 
 %\definecolor{lightgray}{gray}{0.92}
 \fancyhead{}
-\pagestyle{fancy}
+% \pagestyle{fancy} % this was causing an error
 
 \parskip = 12pt				% space between paragraphs
 \setlength{\extrarowheight}{1.5pt}
@@ -86,14 +87,6 @@
 \emergencystretch=\maxdimen
 \hyphenpenalty=10000
 \hbadness=10000
-
-%\hypersetup{%
-%	colorlinks=false,% hyperlinks will be black
-%	linkbordercolor=red,% hyperlink borders will be red
-%	pdfborderstyle={/S/U/W 1}% border style will be underline of width 1pt
-%}
-
-
 
 %%The following sets up how the pdf displays links and functions in Acrobat.
 \hypersetup{
